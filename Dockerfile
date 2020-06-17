@@ -5,6 +5,8 @@ ADD https://github.com/counteractive/o365beat/releases/download/v1.5.1/o365beat-
 RUN dpkg -i /tmp/o365beat-1.5.1-amd64.deb \
     && mkdir -p /var/lib/o365beat \
     && mkdir -p /var/log/o365beat \
+    && mkdir -p /usr/share/o365beat \
+    && mkdir -p /etc/o365beat \
     && useradd -ms /bin/bash o365beat \
     && chown o365beat:o365beat /var/log/o365beat \
     && chown o365beat:o365beat /var/lib/o365beat \
